@@ -136,6 +136,15 @@ The application uses a SQL database for persistent storage. Ensure your database
 2. Install JavaFX Support extension
 3. Set `java.configuration.runtimes` to Java 21
 
+## ScreenShots
+
+<img width="894" height="636" alt="Screenshot 2024-11-16 002903" src="https://github.com/user-attachments/assets/8fc47457-b7aa-4767-8aa2-424b6211a72b" />
+<img width="1918" height="1046" alt="Screenshot 2024-11-26 103210" src="https://github.com/user-attachments/assets/a37ca6b7-3d95-420a-90ba-621a6b47f0d7" />
+<img width="1919" height="1046" alt="Screenshot 2024-11-26 103414" src="https://github.com/user-attachments/assets/a8f46d3e-8da5-44f0-9036-ef533803c508" />
+<img width="1918" height="1048" alt="Screenshot 2024-11-26 103241" src="https://github.com/user-attachments/assets/cfb58121-d821-4807-9b82-b3c4e641912a" />
+<img width="1919" height="1043" alt="Screenshot 2024-11-26 103431" src="https://github.com/user-attachments/assets/42a9aa80-e53d-411a-8c2f-2d0fe1ba37d2" />
+
+
 ## License
 
 This project is proprietary. Unauthorized copying or distribution is prohibited.
