@@ -31,7 +31,7 @@ A comprehensive desktop application for managing retail operations including inv
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/zohaib-han/RetailManagementSystem
    cd Inventra
    ```
 
@@ -49,43 +49,7 @@ A comprehensive desktop application for managing retail operations including inv
    ./mvnw javafx:run          # macOS/Linux
    mvnw.cmd javafx:run        # Windows
    ```
-
-## Project Structure
-
-```
-Inventra/
-├── src/
-│   ├── main/
-│   │   ├── java/com/example/inventra/
-│   │   │   ├── Main.java                    # Application entry point
-│   │   │   ├── SceneController.java         # Scene management
-│   │   │   ├── Controller/                  # UI Controllers
-│   │   │   │   ├── LoginController.java
-│   │   │   │   ├── cashierPOSController.java
-│   │   │   │   ├── adminManageProductsController.java
-│   │   │   │   ├── adminManageUser.java
-│   │   │   │   ├── adminSalesReportController.java
-│   │   │   │   └── ...
-│   │   │   ├── DBHandler/                   # Database operations
-│   │   │   │   ├── DataBaseHandler.java
-│   │   │   │   ├── UserAuthentication.java
-│   │   │   │   ├── ProductHandler.java
-│   │   │   │   ├── POSHandler.java
-│   │   │   │   └── ...
-│   │   │   └── OOP/                         # Domain models
-│   │   │       ├── Admin.java
-│   │   │       ├── Cashier.java
-│   │   │       ├── Customer.java
-│   │   │       └── ...
-│   │   └── resources/com/example/inventra/
-│   │       ├── fxml/                        # UI layouts
-│   │       ├── css/                         # Stylesheets
-│   │       └── font/                        # Custom fonts
-│   └── test/
-├── pom.xml                                  # Maven configuration
-└── README.md                                # This file
-```
-
+   
 ## Usage
 
 ### Login
