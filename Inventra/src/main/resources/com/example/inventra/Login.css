@@ -1,0 +1,59 @@
+
+@font-face {
+    src: url(font/Montserrat-Bold.ttf);
+}
+@font-face {
+    src: url(font/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    src: url(font/Montserrat-Regular.ttf);
+}
+@font-face {
+    src: url(font/Montserrat-ExtraBold.ttf);
+}
+@font-face {
+    src: url(font/Montserrat-Black.ttf);
+}
+SplitPane{
+    -fx-box-border: transparent;
+}
+#loginLeft{
+    -fx-background-color: linear-gradient(to top, #f3c9a3, #fb6f12, tomato);
+    -fx-box-border: transparent;
+    -fx-background-radius: 20;
+}
+#loginRight{
+    -fx-alignment: center;
+    -fx-box-border: transparent;
+}
+#loginHeading{
+    -fx-fill: grey;
+    -fx-font-family: "Montserrat ExtraBold";
+    -fx-alignment: center;
+    -fx-font-size: 24px;
+}
+#leftPaneHeading{
+    -fx-fill: white;
+    -fx-font-family: "Montserrat ExtraBold";
+    -fx-font-size: 20px;
+    -fx-line-spacing: 0.3em;
+}
+#leftText{
+    -fx-fill: white;
+    -fx-font-family: "Montserrat Regular";
+    -fx-font-size: 12px;
+}
+#rightText, #forgotText{
+    -fx-fill: grey;
+    -fx-font-family: "Montserrat Regular";
+    -fx-font-size: 10px;
+}
+#loginButton{
+    -fx-background-color: #fa7202;
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+#dropDown, #password, #username{
+    -fx-background-color: rgba(128, 128, 128, 0.1);
+}

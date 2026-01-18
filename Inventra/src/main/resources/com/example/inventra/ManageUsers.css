@@ -1,0 +1,154 @@
+@font-face {
+    src: url(font/Montserrat-Bold.ttf);
+}
+@font-face {
+    src: url(font/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    src: url(font/Montserrat-Regular.ttf);
+}
+@font-face {
+    src: url(font/Montserrat-ExtraBold.ttf);
+}
+@font-face {
+    src: url(font/Montserrat-Black.ttf);
+}
+@font-face {
+    src: url(font/Montserrat-Thin.ttf);
+}
+AnchorPane{
+    -fx-background-color: white;
+}
+#loginLeft{
+    -fx-background-color: linear-gradient(to top, #fb6f12, tomato);
+    -fx-box-border: transparent;
+
+}
+Button, MenuButton, ToggleButton, ComboBox{
+    -fx-cursor: hand;
+    -fx-border-radius: 5;
+}
+MenuItem{
+    -fx-min-width: 100px;
+    -fx-max-width: 100px;
+}
+Button{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-alignment: center-left;
+}
+Button:hover{
+    -fx-background-color: white;
+    -fx-text-fill: #fa7202;
+}
+#loginLeft Button {
+    -fx-border-style: none none solid none; /* Top, Right, Bottom, Left */
+    -fx-border-width: 0 0 0.5px 0;           /* Top, Right, Bottom, Left */
+    -fx-border-color: transparent transparent white transparent;
+    -fx-border-radius: 0;
+}
+
+#selectedOption{
+    -fx-background-color: white;
+    -fx-text-fill: #fa7202;
+    -fx-border-width: 0;
+}
+#logoutButton{
+    -fx-alignment: center;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-font-family: "Montserrat Regular";
+    -fx-text-fill: white;
+    -fx-font-weight: 900;
+    -fx-font-size: 14px;
+    -fx-border-color: white;
+    -fx-border-radius: 10;
+}
+#logoutButton:hover{
+    -fx-text-fill: tomato;
+    -fx-background-color: white;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: white;
+}
+#indicator{
+    -fx-fill: red;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+#profilePic{
+    -fx-background-radius: 50;
+    -fx-padding: 10;
+    -fx-background-color: transparent;
+}
+#welcome{
+    -fx-font-family: "Monserrat Regular";
+    -fx-fill: white;
+    -fx-font-size: 16px;
+}
+#name{
+    -fx-fill: white;
+    -fx-font-weight: 900;
+    -fx-font-size: 18px;
+}
+#admin{
+    -fx-font-weight: 900;
+    -fx-font-size: 14px;
+    -fx-fill: #08ec08;
+}
+#Heading{
+    -fx-text-fill: tomato;
+    -fx-font-family: "Montserrat ExtraBold";
+    -fx-font-size: 24px;
+    -fx-background-color: transparent;
+    -fx-border-style: solid; /* Top, Right, Bottom, Left */
+    -fx-border-width: 0 2px 0 0;           /* Top, Right, Bottom, Left */
+    -fx-border-color: tomato;
+    -fx-border-radius: 0;
+}
+#pane2 Button {
+    -fx-background-color: tomato;
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-alignment: center;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-color: tomato;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+#pane2 Button:hover{
+    -fx-background-color: transparent;
+}
+#pane2 TextField, #pane3 TextField, #pane2 ComboBox{
+    -fx-background-color: transparent;
+    -fx-border-style: solid; /* Top, Right, Bottom, Left */
+    -fx-border-width: 0 0 1px 0;           /* Top, Right, Bottom, Left */
+    -fx-border-color: rgba(0, 0, 0, 0.6);
+}
+#pane2 ComboBox{
+    -fx-border-radius: 0;
+}
+#pane2 TextField:focused, #pane3 TextField:focused{
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, tomato, 5, 0.5, 0, 0);
+    -fx-background-color: white;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: transparent;
+}
+MenuButton, #pane3 ToggleButton{
+    -fx-background-color: transparent;
+    -fx-border-style: solid;
+    -fx-border-width: 0.5px;
+    -fx-border-color: grey;
+    -fx-border-radius: 5;
+    -fx-font-family: "Montserrat";
+}
+#pane3 ToggleButton:selected{
+    -fx-background-color: tomato;
+    -fx-text-fill: white;
+    -fx-font-weight: 900;
+    -fx-border-color: transparent;
+}

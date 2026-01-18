@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1270.0" stylesheets="@customerTakeaway.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventra.Controller.customerTakeawayController">
+    <left>
+        <AnchorPane fx:id="loginLeft" prefHeight="800.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="selectedOption" layoutX="13.0" layoutY="149.0" mnemonicParsing="false" onAction="#loadTakeaway" prefHeight="30.0" prefWidth="173.0" text="💳    Order" AnchorPane.leftAnchor="13.5" AnchorPane.rightAnchor="13.5" />
+                <Button fx:id="logoutButton" layoutX="16.0" layoutY="594.0" mnemonicParsing="false" onAction="#loadLogout" prefHeight="41.0" prefWidth="157.0" text="🔒     Logout" AnchorPane.leftAnchor="21.5" />
+                <ImageView fitHeight="52.0" fitWidth="36.0" layoutX="19.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@whiteLogo.png" />
+                    </image>
+                </ImageView>
+                <Text fx:id="welcome" layoutX="71.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome !" />
+                <Text fx:id="name" layoutX="72.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zohaib Khan" />
+                <Text fx:id="admin" layoutX="72.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer" />
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane fx:id="loginRight" minWidth="-Infinity" prefHeight="757.0" prefWidth="1042.0" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane fx:id="pane1st" layoutX="-0.33333333333333337" prefHeight="80.0" prefWidth="1070.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <Button layoutX="15.333333333333334" layoutY="32.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="236.0" styleClass="Heading" text="Order Products" AnchorPane.leftAnchor="15.0" />
+                    </children>
+                </AnchorPane>
+                <TableView fx:id="tableView" layoutX="30.0" layoutY="94.0" prefHeight="287.0" prefWidth="552.0" AnchorPane.leftAnchor="30.0">
+                    <columns>
+                        <TableColumn fx:id="colBarcode" prefWidth="99.33332061767578" text="Bar Code" />
+                        <TableColumn fx:id="colProductName" prefWidth="177.99993133544922" text="Product Name" />
+                        <TableColumn fx:id="colQuantity" prefWidth="146.66659545898438" text="Quantity" />
+                        <TableColumn fx:id="colPrice" prefWidth="124.00003051757812" text="Price" />
+                    </columns>
+                </TableView>
+                <AnchorPane fx:id="pane7th" layoutX="784.0" layoutY="411.0" prefHeight="154.0" prefWidth="220.0" styleClass="lowerBoxes" AnchorPane.rightAnchor="30.0">
+                    <children>
+                        <Text layoutX="14.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sub Total :" />
+                        <TextField fx:id="total1" editable="false" layoutX="121.0" layoutY="44.0" prefHeight="25.0" prefWidth="60.0" text="0.00" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="pane6th" layoutX="28.0" layoutY="411.0" prefHeight="154.0" prefWidth="220.0" styleClass="lowerBoxes" AnchorPane.leftAnchor="30.0">
+                    <children>
+                        <Text layoutX="15.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Quantity :" />
+                        <Text layoutX="15.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Items :" />
+                        <TextField fx:id="quantityCount" disable="true" editable="false" layoutX="151.0" layoutY="38.0" prefHeight="25.0" prefWidth="60.0" text="0" />
+                        <TextField fx:id="itemCount" disable="true" editable="false" layoutX="151.0" layoutY="87.0" prefHeight="25.0" prefWidth="60.0" text="0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="pane4th" layoutX="430.0" layoutY="411.0" prefHeight="154.0" prefWidth="220.0" styleClass="lowerBoxes">
+                    <children>
+                        <Text layoutX="14.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Loyalty Points :" />
+                        <Text layoutX="14.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loyalty Discount :" />
+                        <TextField fx:id="loyaltyPoint" editable="false" layoutX="164.0" layoutY="26.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField editable="false" layoutX="164.0" layoutY="65.0" prefHeight="25.0" prefWidth="60.0" text="5%" />
+                        <Text layoutX="14.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Earn Loyalty :" />
+                        <CheckBox layoutX="165.0" layoutY="109.0" mnemonicParsing="false" />
+                    </children>
+                </AnchorPane>
+                <TextField fx:id="totalText" disable="true" editable="false" layoutX="817.0" layoutY="594.0" prefHeight="47.0" prefWidth="220.0" promptText="0.00" text="0.00" AnchorPane.rightAnchor="30.0" />
+                <Button fx:id="billBtn" layoutX="657.0" layoutY="610.0" mnemonicParsing="false" onAction="#processOrder" prefHeight="30.0" prefWidth="121.0" text="Submit Order" />
+                <Button fx:id="billBtn1" layoutX="710.0" layoutY="182.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="30.0" prefWidth="121.0" text="Add Product" />
+                <ComboBox fx:id="prodCombo" layoutX="606.0" layoutY="94.0" prefWidth="150.0" promptText="Products" />
+                <ComboBox fx:id="bar" layoutX="778.0" layoutY="94.0" prefWidth="150.0" promptText="Bar Code" />
+            <TextField fx:id="quantity" layoutX="606.0" layoutY="137.0" prefHeight="25.0" prefWidth="63.0" promptText="Quantity" />
+            <Text fill="#fc6907" layoutX="30.0" layoutY="635.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Number" wrappingWidth="197.8203125">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <TextField fx:id="orderNo" layoutX="228.0" layoutY="612.0" prefHeight="25.0" prefWidth="75.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></TextField>
+            <Label fx:id="warningText" layoutX="619.0" layoutY="229.0" prefHeight="26.0" prefWidth="214.0" textFill="#fc0707">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

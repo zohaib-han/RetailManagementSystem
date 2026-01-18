@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1270.0" stylesheets="@Purchase.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventra.Controller.adminPurchase">
+   <left>
+      <AnchorPane fx:id="loginLeft" prefHeight="800.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="26.666666666666657" layoutY="150.0" mnemonicParsing="false" onAction="#loadManageProducts" prefHeight="30.0" prefWidth="173.0" text="🛒    Manage Products" AnchorPane.rightAnchor="0.0" />
+            <Button layoutX="26.666666666666657" layoutY="220.0" mnemonicParsing="false" onAction="#loadManageUsers" prefHeight="30.0" prefWidth="173.0" text="👤    Manage Users" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="selectedOption" layoutX="14.0" layoutY="290.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="165.0" text="💳    Purchase" AnchorPane.leftAnchor="17.5" />
+            <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#loadSalesReport" prefHeight="30.0" prefWidth="173.0" text="📈    Sales Report" AnchorPane.rightAnchor="0.0" />
+            <Button layoutX="14.0" layoutY="430.0" mnemonicParsing="false" onAction="#loadDailySales" prefHeight="30.0" prefWidth="173.0" text="📅    Daily Sales Report" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="logoutButton" layoutX="14.0" layoutY="594.0" mnemonicParsing="false" onAction="#loadLogout" prefHeight="41.0" prefWidth="157.0" text="🔒     Logout" AnchorPane.leftAnchor="21.5" />
+            <ImageView fitHeight="52.0" fitWidth="36.0" layoutX="19.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@whiteLogo.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="welcome" layoutX="71.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome !" />
+            <Text fx:id="name" layoutX="72.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zohaib Khan" />
+            <Text fx:id="a" layoutX="72.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane fx:id="loginRight" minWidth="-Infinity" prefHeight="757.0" prefWidth="1042.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="pane1st" prefHeight="88.0" prefWidth="1107.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <TextField fx:id="invoiceNumber" disable="true" editable="false" layoutX="127.0" layoutY="14.0" promptText="Invoice No" AnchorPane.leftAnchor="30.0" />
+                  <DatePicker fx:id="supplyDate" layoutX="460.0" layoutY="14.0" prefHeight="25.0" prefWidth="150.0" promptText="Date" />
+                  <TextField fx:id="timeBox" disable="true" editable="false" layoutX="867.0" layoutY="14.0" prefWidth="150.0" AnchorPane.rightAnchor="30.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></TextField>
+                  <TextField fx:id="supplierName" layoutX="137.0" layoutY="48.0" promptText="Supplier Name" AnchorPane.leftAnchor="30.0" />
+                  <TextField fx:id="salePrice" layoutX="243.0" layoutY="14.0" prefHeight="25.0" prefWidth="150.0" promptText="Sale Price" />
+                  <Text fx:id="warning" layoutX="903.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="144.8203125" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane2nd" layoutY="86.0" prefHeight="49.0" prefWidth="1106.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <TextField fx:id="barcode" layoutX="30.0" layoutY="12.0" promptText="Bar Code" AnchorPane.leftAnchor="30.0" />
+                  <TextField fx:id="quantity" layoutX="469.0" layoutY="12.0" prefHeight="25.0" prefWidth="150.0" promptText="Quantity" />
+                  <TextField fx:id="purchasePrice" layoutX="681.0" layoutY="11.0" prefHeight="25.0" prefWidth="150.0" promptText="PurchasePrice" AnchorPane.rightAnchor="239.0000000000001" />
+                  <MenuButton fx:id="productMenu" layoutX="237.0" layoutY="12.0" mnemonicParsing="false" prefWidth="150.0" text="Product Name" />
+                  <Button fx:id="billBtn2" layoutX="904.0" layoutY="9.0" mnemonicParsing="false" onAction="#addToTable" prefHeight="30.0" prefWidth="121.0" text="Add to Bill" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane7th" layoutX="784.0" layoutY="411.0" prefHeight="154.0" prefWidth="220.0" styleClass="lowerBoxes" AnchorPane.rightAnchor="30.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sub Total :" />
+                  <TextField fx:id="ttt" editable="false" layoutX="121.0" layoutY="44.0" prefHeight="25.0" prefWidth="60.0" text="2" />
+                  <Text layoutX="14.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adjustment :" />
+                  <TextField layoutX="121.0" layoutY="82.0" prefHeight="25.0" prefWidth="60.0" styleClass="editable" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane5th" layoutX="425.0" layoutY="411.0" prefHeight="154.0" prefWidth="220.0" styleClass="lowerBoxes">
+               <children>
+                  <Text layoutX="14.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax Rate % :" />
+                  <Text layoutX="14.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discount Rate % :" />
+                  <TextField layoutX="147.0" layoutY="24.0" prefHeight="25.0" prefWidth="60.0" styleClass="editable" text="2" />
+                  <TextField layoutX="147.0" layoutY="62.0" prefHeight="25.0" prefWidth="60.0" styleClass="editable" text="5" />
+                  <Text layoutX="14.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Misc Charges :" />
+                  <TextField layoutX="147.0" layoutY="101.0" prefHeight="25.0" prefWidth="60.0" styleClass="editable" text="20" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane6th" layoutX="28.0" layoutY="411.0" prefHeight="154.0" prefWidth="220.0" styleClass="lowerBoxes" AnchorPane.leftAnchor="30.0">
+               <children>
+                  <Text layoutX="15.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Quantity :" />
+                  <Text layoutX="15.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Items :" />
+                  <TextField fx:id="quantityCount" disable="true" editable="false" layoutX="151.0" layoutY="38.0" prefHeight="25.0" prefWidth="60.0" text="0" />
+                  <TextField fx:id="itemCount" disable="true" editable="false" layoutX="151.0" layoutY="87.0" prefHeight="25.0" prefWidth="60.0" text="0" />
+               </children>
+            </AnchorPane>
+            <TextField fx:id="totalText" disable="true" editable="false" layoutX="817.0" layoutY="596.0" prefHeight="45.0" prefWidth="220.0" promptText="0.00" AnchorPane.rightAnchor="30.0" />
+            <Button fx:id="billBtn" layoutX="657.0" layoutY="610.0" mnemonicParsing="false" onAction="#saveData" prefHeight="30.0" prefWidth="121.0" text="Save" />
+            <TableView fx:id="productTableView" layoutX="14.0" layoutY="152.0" prefHeight="247.0" prefWidth="1014.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="42.80000000000018">
+               <columns>
+                  <TableColumn prefWidth="60.66666924953461" text="Sr No" />
+                  <TableColumn fx:id="barcodeColumn" prefWidth="133.33334732055664" text="Bar Code" />
+                  <TableColumn fx:id="supplierNameColumn" prefWidth="133.33334732055664" text="Supplier Name" />
+                  <TableColumn fx:id="productNameColumn" prefWidth="171.33326721191406" text="Product Name" />
+                  <TableColumn fx:id="quantityColumn" prefWidth="110.0" text="Quantity" />
+                  <TableColumn fx:id="supplyDateColumn" prefWidth="102.0" text="Date" />
+                  <TableColumn fx:id="purchasePriceColumn" prefWidth="114.0" text="PurchasePrice" />
+                  <TableColumn fx:id="totalAmountColumn" prefWidth="116.0001220703125" text="Total Amount" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

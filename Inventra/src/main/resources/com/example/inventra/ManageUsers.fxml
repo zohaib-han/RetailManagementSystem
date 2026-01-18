@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1270.0" stylesheets="@ManageUsers.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventra.Controller.adminManageUser">
+   <left>
+      <AnchorPane fx:id="loginLeft" prefHeight="800.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="26.666666666666657" layoutY="150.0" mnemonicParsing="false" onAction="#loadManageProducts" prefHeight="30.0" prefWidth="173.0" text="🛒    Manage Products" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="selectedOption" layoutX="26.666666666666657" layoutY="220.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="173.0" text="👤    Manage Users" AnchorPane.leftAnchor="13.5" AnchorPane.rightAnchor="13.5" />
+            <Button fx:id="purchase" layoutX="14.0" layoutY="290.0" mnemonicParsing="false" onAction="#loadPurchase" prefHeight="30.0" prefWidth="173.0" text="💳    Purchase" AnchorPane.rightAnchor="0.0" />
+            <Button layoutX="14.0" layoutY="360.0" onAction="#loadSalesReport" mnemonicParsing="false" prefHeight="30.0" prefWidth="173.0" text="📈    Sales Report" AnchorPane.rightAnchor="0.0" />
+            <Button layoutX="14.0" layoutY="430.0" onAction="#loadDailySales" mnemonicParsing="false" prefHeight="30.0" prefWidth="173.0" text="📅    Daily Sales Report" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="logoutButton" layoutX="14.0" layoutY="594.0" mnemonicParsing="false" onAction="#loadLogout" prefHeight="41.0" prefWidth="157.0" text="🔒     Logout" AnchorPane.leftAnchor="21.5" />
+            <ImageView fitHeight="52.0" fitWidth="36.0" layoutX="19.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@whiteLogo.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="welcome" layoutX="71.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome !" />
+            <Text fx:id="name" layoutX="72.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zohaib Khan" />
+            <Text fx:id="admin" layoutX="72.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane fx:id="loginRight" minHeight="-Infinity" minWidth="-Infinity" prefHeight="733.0" prefWidth="1059.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="pane1" layoutY="6.0" prefHeight="78.0" prefWidth="1070.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="Heading" layoutX="22.0" layoutY="55.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="223.0" text="Manage Users" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane2" layoutY="107.0" prefHeight="99.0" prefWidth="1070.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <TextField fx:id="usernameField" layoutX="38.0" layoutY="13.0" promptText="User Name" AnchorPane.leftAnchor="37.0" />
+                  <TextField fx:id="phoneNumberField" layoutX="249.0" layoutY="13.0" promptText="Mobile Number" />
+                  <TextField fx:id="passwordField" layoutX="676.0" layoutY="13.0" promptText="Password" />
+                  <TextField fx:id="emailField" layoutX="461.0" layoutY="13.0" promptText="Email" />
+                  <Button fx:id="addUserButton" layoutX="891.0" layoutY="50.0" mnemonicParsing="false" onAction="#addUser" prefHeight="30.0" prefWidth="150.0" text="➕  Add User" textFill="#f40606" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="30.0" />
+                  <Label fx:id="warningLabel" layoutX="731.0" layoutY="80.0" prefHeight="18.0" prefWidth="149.0" AnchorPane.bottomAnchor="0.0">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="userTypeComboBox" layoutX="875.0" layoutY="13.0" prefWidth="150.0" promptText="Select Type" AnchorPane.rightAnchor="30.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane3" layoutY="213.0" prefHeight="60.0" prefWidth="1070.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <TextField layoutX="37.0" layoutY="17.0" prefHeight="25.0" prefWidth="241.0" promptText="🔍          Search Users" AnchorPane.leftAnchor="37.0" />
+                  <MenuButton fx:id="typeMenu" layoutX="308.0" layoutY="18.0" mnemonicParsing="false" prefWidth="100.0" text="Type" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="userTableView" editable="true" layoutX="38.0" layoutY="291.0" prefHeight="347.0" prefWidth="995.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="37.0">
+               <columns>
+                  <TableColumn fx:id="userIDColumn" editable="false" prefWidth="107.20001065731049" text="UserID" />
+                  <TableColumn fx:id="usernameColumn" prefWidth="189.6000747680664" text="User Name" />
+                  <TableColumn fx:id="emailColumn" prefWidth="200.0" text="Email" />
+                  <TableColumn fx:id="phoneNumberColumn" prefWidth="241.99993896484375" text="Phone Number" />
+                  <TableColumn fx:id="userTypeColumn" prefWidth="155.3333740234375" text="Type" />
+                  <TableColumn prefWidth="99.333251953125" text="Actions" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
